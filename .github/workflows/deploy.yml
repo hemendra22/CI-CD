@@ -4,6 +4,10 @@ on:
     push:
         branches:
             - main
+    
+    pull_request:
+        branches:
+            - main
 
 jobs:
     deploy:
@@ -16,5 +20,18 @@ jobs:
                 node-version: 24
 
             - run: npm install
-            - run: npm run build
-            
+            - name : build_application
+              run: npm run build
+    
+    test:
+        runs-on: windows-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 24
+
+            - run: npm install
+            - name : test_case 
+              run: npm run test
