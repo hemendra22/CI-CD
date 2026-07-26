@@ -9,6 +9,7 @@
     "scripts": {
         "build": "npm run lint && npm run test",
         "lint": "eslint .",
+        "eslint": "npm run lint",
         "dev": "nodemon index.js",
         "test": "echo \"Error: no test specified\" && exit 0"
     },
