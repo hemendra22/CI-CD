@@ -11,7 +11,7 @@
         "lint": "eslint .",
         "eslint": "npm run lint",
         "dev": "nodemon index.js",
-        "test": "echo \"Error: no test specified\" && exit 0"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
         "@xenova/transformers": "^2.17.2",
